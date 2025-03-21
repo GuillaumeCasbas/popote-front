@@ -2,10 +2,16 @@
   "name": "popote-front",
   "version": "0.1.0",
   "private": true,
+  "description": "Ptitnours CMS",
+  "author": {
+    "email": "guillaume.casbas@gmail.com",
+    "name": "Guillaume Casbas"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
+    "build": "npx next build",
+    "start": "npx next start",
+    "postinstall": "[ -z \"$GANDI\" ] || NODE_ENV=production npm run build",
     "lint": "next lint"
   },
   "dependencies": {
